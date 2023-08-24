@@ -28,6 +28,12 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
           navigation.navigate("Image");
         }}
       />
+      <Button
+        title="Counter Screen"
+        onPress={event => {
+          navigation.navigate("Counter");
+        }}
+      />
       <TouchableOpacity
         onPress={event => {
           console.log('Touchable Opacity component pressed.')

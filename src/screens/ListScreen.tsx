@@ -2,11 +2,11 @@ import React from 'react';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
 import { Text, StyleSheet, FlatList } from 'react-native';
 
-interface HomeScreenProps {
+interface ListScreenProps {
   navigation: NavigationScreenProp<NavigationState>;
 }
 
-const ListScreen: React.FC<HomeScreenProps> = () => {
+const ListScreen: React.FC<ListScreenProps> = () => {
   // const friends = [
   //   { name: 'Friend #1', key: '1' },
   //   { name: 'Friend #2', key: '2' },

@@ -3,11 +3,11 @@ import { NavigationScreenProp, NavigationState } from 'react-navigation';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import ImageDetail from '../components/ImageDetail';
 
-interface HomeScreenProps {
+interface ImageScreenProps {
   navigation: NavigationScreenProp<NavigationState>;
 }
 
-const ImageScreen: React.FC<HomeScreenProps> = () => {
+const ImageScreen: React.FC<ImageScreenProps> = () => {
   return (
     <View>
       <Text style={styles.text}>This is the Image Screen</Text>

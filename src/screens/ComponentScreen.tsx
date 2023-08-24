@@ -2,11 +2,11 @@ import React from 'react';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
 import { Text, View, StyleSheet } from 'react-native';
 
-interface HomeScreenProps {
+interface ComponentScreenProps {
   navigation: NavigationScreenProp<NavigationState>;
 }
 
-const ComponentScreen: React.FC<HomeScreenProps> = () => {
+const ComponentScreen: React.FC<ComponentScreenProps> = () => {
   return (
     <View>
       <Text style={styles.text}>
