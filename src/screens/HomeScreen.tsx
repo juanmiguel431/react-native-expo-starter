@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
-import { Button, Text, View } from 'react-native';
+import { Button, Text, TouchableOpacity, View } from 'react-native';
 
 interface HomeScreenProps {
   navigation: NavigationScreenProp<NavigationState>;
@@ -11,9 +11,9 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
     <View>
       <Text>Hello there!</Text>
       <Button
-        title="Components Screen"
+        title="Component Screen"
         onPress={event => {
-          navigation.navigate("Components");
+          navigation.navigate("Component");
         }}
       />
       <Button
@@ -22,6 +22,19 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
           navigation.navigate("List");
         }}
       />
+      <Button
+        title="Image Screen"
+        onPress={event => {
+          navigation.navigate("Image");
+        }}
+      />
+      <TouchableOpacity
+        onPress={event => {
+          console.log('Touchable Opacity component pressed.')
+        }}
+      >
+        <Text>You can click on me</Text>
+      </TouchableOpacity>
     </View>
   )
 };

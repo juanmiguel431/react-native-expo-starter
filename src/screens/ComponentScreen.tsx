@@ -6,7 +6,7 @@ interface HomeScreenProps {
   navigation: NavigationScreenProp<NavigationState>;
 }
 
-const ComponentsScreen: React.FC<HomeScreenProps> = () => {
+const ComponentScreen: React.FC<HomeScreenProps> = () => {
   return (
     <View>
       <Text style={styles.text}>
@@ -24,4 +24,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default ComponentsScreen;
+export default ComponentScreen;

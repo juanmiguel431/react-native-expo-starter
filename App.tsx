@@ -3,8 +3,9 @@ import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer } from 'react-navigation';
 import HomeScreen from './src/screens/HomeScreen';
-import ComponentsScreen from './src/screens/ComponentsScreen';
+import ComponentScreen from './src/screens/ComponentScreen';
 import ListScreen from './src/screens/ListScreen';
+import ImageScreen from './src/screens/ImageScreen';
 
 export function App() {
   return (
@@ -26,8 +27,9 @@ const styles = StyleSheet.create({
 
 const navigator = createStackNavigator({
   Home: HomeScreen,
-  Components: ComponentsScreen,
-  List: ListScreen
+  Component: ComponentScreen,
+  List: ListScreen,
+  Image: ImageScreen,
 }, {
   initialRouteName: 'Home',
   defaultNavigationOptions: {
