@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
-import { View, StyleSheet, Button } from 'react-native';
+import { View, StyleSheet, Button, FlatList } from 'react-native';
 
 interface ColorScreenProps {
   navigation: NavigationScreenProp<NavigationState>;
 }
 
 const ColorScreen: React.FC<ColorScreenProps> = () => {
-  const [color, setColor] = useState('rgb(0,0,0)');
+  const [colors, setColors] = useState<string[]>([]);
+
   return (
     <View>
-      <Button title="Add a color" onPress={() => setColor(randomRgb)}/>
-      <View
-        style={{ height: 100, width: 100, backgroundColor: color}}
+      <Button title="Add a color" onPress={() => setColors((value) => [...value, randomRgb()])}/>
+      <FlatList
+        data={colors}
+        renderItem={(item) => (
+          <View
+            style={{ height: 100, width: 100, backgroundColor: item.item }}
+          />
+        )}
       />
     </View>
   )
