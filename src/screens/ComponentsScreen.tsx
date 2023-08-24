@@ -10,7 +10,7 @@ const ComponentsScreen: React.FC<HomeScreenProps> = () => {
   return (
     <View>
       <Text style={styles.text}>
-        This is the components screen
+        This is the Components Screen
       </Text>
       <Text>Hi there</Text>
     </View>

@@ -16,6 +16,12 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
           navigation.navigate("Components");
         }}
       />
+      <Button
+        title="List Screen"
+        onPress={event => {
+          navigation.navigate("List");
+        }}
+      />
     </View>
   )
 };
