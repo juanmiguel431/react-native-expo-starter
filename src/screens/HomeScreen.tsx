@@ -34,6 +34,12 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
           navigation.navigate("Counter");
         }}
       />
+      <Button
+        title="Color Screen"
+        onPress={event => {
+          navigation.navigate("Color");
+        }}
+      />
       <TouchableOpacity
         onPress={event => {
           console.log('Touchable Opacity component pressed.')
