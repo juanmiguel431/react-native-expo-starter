@@ -1,9 +1,17 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Image, ImageSourcePropType, Text, View } from 'react-native';
 
-const ImageDetail: React.FC = () => {
+type ImageDetailProps = {
+  title: string;
+  imageSource:  ImageSourcePropType;
+};
+
+const ImageDetail: React.FC<ImageDetailProps> = ({ imageSource, title }) => {
   return (
-    <Text>Image Detail</Text>
+    <View>
+      <Text>{title}</Text>
+      <Image source={imageSource}/>
+    </View>
   );
 }
 
