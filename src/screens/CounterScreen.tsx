@@ -13,11 +13,11 @@ const CounterScreen: React.FC<CounterScreenProps> = () => {
       <Text>Counter</Text>
       <Button
         title="Increase"
-        onPress={_ => setCounter(() => counter + 1)}
+        onPress={_ => setCounter(value => value + 1)}
       />
       <Button
         title="Decrease"
-        onPress={_ => setCounter(() => counter - 1)}
+        onPress={_ => setCounter(value => value - 1)}
       />
       <Text style={styles.text}>{counter}</Text>
     </View>
