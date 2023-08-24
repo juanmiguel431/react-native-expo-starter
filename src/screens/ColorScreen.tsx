@@ -13,6 +13,7 @@ const ColorScreen: React.FC<ColorScreenProps> = () => {
     <View>
       <Button title="Add a color" onPress={() => setColors((value) => [...value, randomRgb()])}/>
       <FlatList
+        keyExtractor={item => item}
         data={colors}
         renderItem={(item) => (
           <View
