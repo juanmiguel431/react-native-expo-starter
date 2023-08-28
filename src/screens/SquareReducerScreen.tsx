@@ -1,39 +1,51 @@
-import { Text, View, StyleSheet } from 'react-native';
-import React, { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
+import React, { useReducer } from 'react';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
-import ColorCounter from '../components/ColorCounter';
+import ColorCounterForReducer from '../components/ColorCounterForReducer';
 
 interface SquareReducerScreenProps {
   navigation: NavigationScreenProp<NavigationState>;
 }
 
+const reducer = (state: any, action: any) => {
+  switch (action.colorToChange) {
+    case 'red':
+      return { ...state, red: state.red + action.amount }
+    case 'green':
+      return { ...state, green: state.green + action.amount }
+    case 'blue':
+      return { ...state, blue: state.blue + action.amount }
+    default:
+      return state;
+  }
+}
+
 const SquareReducerScreen: React.FC<SquareReducerScreenProps> = (props) => {
-  const [red, setRed] = useState(0);
-  const [blue, setBlue] = useState(0);
-  const [green, setGreen] = useState(0);
+
+  const [state, dispatch] = useReducer(reducer, { red: 0, green: 0, blue: 0});
 
   return (
     <View>
-      <ColorCounter
+      <ColorCounterForReducer
         title="Red"
-        value={red}
-        onChange={setRed}
+        value={state.red}
+        onChange={value => dispatch({ colorToChange: 'red', amount: value })}
       />
-      <ColorCounter
+      <ColorCounterForReducer
         title="Blue"
-        value={blue}
-        onChange={setBlue}
+        value={state.blue}
+        onChange={value => dispatch({ colorToChange: 'blue', amount: value })}
       />
-      <ColorCounter
+      <ColorCounterForReducer
         title="Green"
-        value={green}
-        onChange={setGreen}
+        value={state.green}
+        onChange={value => dispatch({ colorToChange: 'green', amount: value })}
       />
       <View
         style={{
           height: 100,
           width: 100,
-          backgroundColor: `rgb(${red},${green},${blue})`
+          backgroundColor: `rgb(${state.red},${state.green},${state.blue})`
       }}
       />
     </View>
