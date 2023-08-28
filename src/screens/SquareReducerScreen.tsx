@@ -1,5 +1,5 @@
 import { View, StyleSheet } from 'react-native';
-import React, { useReducer } from 'react';
+import React, { Reducer, useReducer } from 'react';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
 import ColorCounterForReducer from '../components/ColorCounterForReducer';
 
@@ -7,7 +7,7 @@ interface SquareReducerScreenProps {
   navigation: NavigationScreenProp<NavigationState>;
 }
 
-const reducer = (state: any, action: any) => {
+const reducer: Reducer<ReducerState, ReducerAction> = (state, action) => {
   switch (action.colorToChange) {
     case 'red':
       return { ...state, red: state.red + action.amount }
@@ -18,6 +18,17 @@ const reducer = (state: any, action: any) => {
     default:
       return state;
   }
+}
+
+type ReducerState = {
+  red: number;
+  green: number;
+  blue: number;
+}
+
+type ReducerAction = {
+  colorToChange: string;
+  amount: number;
 }
 
 const SquareReducerScreen: React.FC<SquareReducerScreenProps> = (props) => {
