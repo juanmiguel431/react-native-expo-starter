@@ -29,6 +29,13 @@ const SquareScreen: React.FC<SquareScreenProps> = (props) => {
         value={green}
         onChange={setGreen}
       />
+      <View
+        style={{
+          height: 100,
+          width: 100,
+          backgroundColor: `rgb(${red},${green},${blue})`
+      }}
+      />
     </View>
   );
 }
