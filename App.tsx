@@ -10,6 +10,7 @@ import CounterScreen from './src/screens/CounterScreen';
 import ColorScreen from './src/screens/ColorScreen';
 import SquareScreen from './src/screens/SquareScreen';
 import { SCREEN } from './src/models';
+import SquareReducerScreen from './src/screens/SquareReducerScreen';
 
 // export function App() {
 //   return (
@@ -37,6 +38,7 @@ const navigator = createStackNavigator({
   [SCREEN.Counter]: CounterScreen,
   [SCREEN.Color]: ColorScreen,
   [SCREEN.Square]: SquareScreen,
+  [SCREEN.SquareReducer]: SquareReducerScreen,
 }, {
   initialRouteName: SCREEN.Home,
   defaultNavigationOptions: {

@@ -6,6 +6,7 @@ export const SCREEN = {
   Counter: 'Counter',
   Color: 'Color',
   Square: 'Square',
+  SquareReducer: 'Square Reducer',
 } as const;
 
 type ObjectValues<T> = T[keyof T];

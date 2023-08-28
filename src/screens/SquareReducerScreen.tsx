@@ -1,0 +1,45 @@
+import { Text, View, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { NavigationScreenProp, NavigationState } from 'react-navigation';
+import ColorCounter from '../components/ColorCounter';
+
+interface SquareReducerScreenProps {
+  navigation: NavigationScreenProp<NavigationState>;
+}
+
+const SquareReducerScreen: React.FC<SquareReducerScreenProps> = (props) => {
+  const [red, setRed] = useState(0);
+  const [blue, setBlue] = useState(0);
+  const [green, setGreen] = useState(0);
+
+  return (
+    <View>
+      <ColorCounter
+        title="Red"
+        value={red}
+        onChange={setRed}
+      />
+      <ColorCounter
+        title="Blue"
+        value={blue}
+        onChange={setBlue}
+      />
+      <ColorCounter
+        title="Green"
+        value={green}
+        onChange={setGreen}
+      />
+      <View
+        style={{
+          height: 100,
+          width: 100,
+          backgroundColor: `rgb(${red},${green},${blue})`
+      }}
+      />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({});
+
+export default SquareReducerScreen;
