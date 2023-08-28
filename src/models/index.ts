@@ -1,3 +1,5 @@
+type ObjectValues<T> = T[keyof T];
+
 export const SCREEN = {
   Home: 'Home',
   Component: 'Component',
@@ -9,5 +11,13 @@ export const SCREEN = {
   SquareReducer: 'Square Reducer',
 } as const;
 
-type ObjectValues<T> = T[keyof T];
-export type Screen =ObjectValues<typeof SCREEN>;
+
+export type Screen = ObjectValues<typeof SCREEN>;
+
+export const ACTION_TYPE = {
+  ChangeToRed: 'change_to_red',
+  ChangeToGreen: 'change_to_Green',
+  ChangeToBlue: 'change_to_blue',
+} as const;
+
+export type ActionType = ObjectValues<typeof ACTION_TYPE>;

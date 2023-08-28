@@ -2,19 +2,20 @@ import { View, StyleSheet } from 'react-native';
 import React, { Reducer, useReducer } from 'react';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
 import ColorCounterForReducer from '../components/ColorCounterForReducer';
+import { ACTION_TYPE, ActionType } from '../models';
 
 interface SquareReducerScreenProps {
   navigation: NavigationScreenProp<NavigationState>;
 }
 
 const reducer: Reducer<ReducerState, ReducerAction> = (state, action) => {
-  switch (action.colorToChange) {
-    case 'red':
-      return { ...state, red: state.red + action.amount }
-    case 'green':
-      return { ...state, green: state.green + action.amount }
-    case 'blue':
-      return { ...state, blue: state.blue + action.amount }
+  switch (action.type) {
+    case ACTION_TYPE.ChangeToRed:
+      return { ...state, red: state.red + action.payload }
+    case ACTION_TYPE.ChangeToGreen:
+      return { ...state, green: state.green + action.payload }
+    case ACTION_TYPE.ChangeToBlue:
+      return { ...state, blue: state.blue + action.payload }
     default:
       return state;
   }
@@ -27,8 +28,8 @@ type ReducerState = {
 }
 
 type ReducerAction = {
-  colorToChange: string;
-  amount: number;
+  type: ActionType;
+  payload: number;
 }
 
 const SquareReducerScreen: React.FC<SquareReducerScreenProps> = (props) => {
@@ -40,17 +41,17 @@ const SquareReducerScreen: React.FC<SquareReducerScreenProps> = (props) => {
       <ColorCounterForReducer
         title="Red"
         value={state.red}
-        onChange={value => dispatch({ colorToChange: 'red', amount: value })}
+        onChange={value => dispatch({ type: ACTION_TYPE.ChangeToRed, payload: value })}
       />
       <ColorCounterForReducer
         title="Blue"
         value={state.blue}
-        onChange={value => dispatch({ colorToChange: 'blue', amount: value })}
+        onChange={value => dispatch({ type: ACTION_TYPE.ChangeToBlue, payload: value })}
       />
       <ColorCounterForReducer
         title="Green"
         value={state.green}
-        onChange={value => dispatch({ colorToChange: 'green', amount: value })}
+        onChange={value => dispatch({ type: ACTION_TYPE.ChangeToGreen, payload: value })}
       />
       <View
         style={{
