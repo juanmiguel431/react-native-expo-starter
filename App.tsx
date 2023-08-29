@@ -11,6 +11,7 @@ import ColorScreen from './src/screens/ColorScreen';
 import SquareScreen from './src/screens/SquareScreen';
 import { SCREEN } from './src/models';
 import SquareReducerScreen from './src/screens/SquareReducerScreen';
+import CounterReducerScreen from './src/screens/CounterReducerScreen';
 
 // export function App() {
 //   return (
@@ -36,6 +37,7 @@ const navigator = createStackNavigator({
   [SCREEN.List]: ListScreen,
   [SCREEN.Image]: ImageScreen,
   [SCREEN.Counter]: CounterScreen,
+  [SCREEN.CounterReducer]: CounterReducerScreen,
   [SCREEN.Color]: ColorScreen,
   [SCREEN.Square]: SquareScreen,
   [SCREEN.SquareReducer]: SquareReducerScreen,

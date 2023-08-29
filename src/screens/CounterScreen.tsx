@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
-import { Text, View, StyleSheet, Image, Button } from 'react-native';
+import { Text, View, StyleSheet, Button } from 'react-native';
 
 interface CounterScreenProps {
   navigation: NavigationScreenProp<NavigationState>;
 }
 
 const CounterScreen: React.FC<CounterScreenProps> = () => {
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(0);
   return (
     <View>
       <Text>Counter</Text>
