@@ -10,6 +10,7 @@ export const SCREEN = {
   Color: 'Color',
   Square: 'Square',
   SquareReducer: 'Square Reducer',
+  Text: 'Text',
 } as const;
 export type Screen = ObjectValues<typeof SCREEN>;
 

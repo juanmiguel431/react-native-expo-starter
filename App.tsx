@@ -12,6 +12,7 @@ import SquareScreen from './src/screens/SquareScreen';
 import { SCREEN } from './src/models';
 import SquareReducerScreen from './src/screens/SquareReducerScreen';
 import CounterReducerScreen from './src/screens/CounterReducerScreen';
+import TextScreen from './src/screens/TextScreen';
 
 // export function App() {
 //   return (
@@ -41,6 +42,7 @@ const navigator = createStackNavigator({
   [SCREEN.Color]: ColorScreen,
   [SCREEN.Square]: SquareScreen,
   [SCREEN.SquareReducer]: SquareReducerScreen,
+  [SCREEN.Text]: TextScreen,
 }, {
   initialRouteName: SCREEN.Home,
   defaultNavigationOptions: {
