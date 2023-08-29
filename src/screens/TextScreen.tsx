@@ -10,7 +10,7 @@ const TextScreen: React.FC<TextScreenProps> = () => {
   const [name, setName] = useState('');
   return (
     <View>
-      <Text>Text Screen</Text>
+      <Text>Enter Name:</Text>
       <TextInput
         style={styles.input}
         autoCapitalize="none"
@@ -21,7 +21,7 @@ const TextScreen: React.FC<TextScreenProps> = () => {
         // }}
         onChangeText={setName}
       />
-      <Text>Hello, {name}</Text>
+      <Text>Hello, My name is {name}</Text>
     </View>
   )
 };
