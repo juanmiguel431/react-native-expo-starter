@@ -16,9 +16,10 @@ const TextScreen: React.FC<TextScreenProps> = () => {
         autoCapitalize="none"
         autoCorrect={false}
         value={name}
-        onChange={e => {
-          setName(e.nativeEvent.text);
-        }}
+        // onChange={e => {
+        //   setName(e.nativeEvent.text);
+        // }}
+        onChangeText={setName}
       />
       <Text>Hello, {name}</Text>
     </View>
