@@ -7,7 +7,7 @@ interface TextScreenProps {
 }
 
 const TextScreen: React.FC<TextScreenProps> = () => {
-  const [counter, setCounter] = useState(0);
+  const [name, setName] = useState('');
   return (
     <View>
       <Text>Text Screen</Text>
@@ -15,7 +15,12 @@ const TextScreen: React.FC<TextScreenProps> = () => {
         style={styles.input}
         autoCapitalize="none"
         autoCorrect={false}
+        value={name}
+        onChange={e => {
+          setName(e.nativeEvent.text);
+        }}
       />
+      <Text>Hello, {name}</Text>
     </View>
   )
 };
