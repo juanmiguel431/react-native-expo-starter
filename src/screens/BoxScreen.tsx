@@ -16,15 +16,28 @@ const BoxScreen: React.FC<BoxScreenProps> = () => {
         </View>
       </View>
 
-      {/*Flex start*/}
-      <View style={flexStyles.viewStyle}>
-        <View style={flexStyles.textStyle}>
+      {/*Flex Align property*/}
+      <View style={flexAlignStyles.viewStyle}>
+        <View style={flexAlignStyles.textStyle}>
           <Text>Child 1</Text>
         </View>
-        <View style={flexStyles.textStyle}>
+        <View style={flexAlignStyles.textStyle}>
           <Text>Child 2</Text>
         </View>
-        <View style={flexStyles.textStyle}>
+        <View style={flexAlignStyles.textStyle}>
+          <Text>Child 3</Text>
+        </View>
+      </View>
+
+      {/*Flex Direction property*/}
+      <View style={flexDirectionStyles.viewStyle}>
+        <View style={flexDirectionStyles.textStyle}>
+          <Text>Child 1</Text>
+        </View>
+        <View style={flexDirectionStyles.textStyle}>
+          <Text>Child 2</Text>
+        </View>
+        <View style={flexDirectionStyles.textStyle}>
           <Text>Child 3</Text>
         </View>
       </View>
@@ -46,11 +59,26 @@ const styles = StyleSheet.create({
 });
 
 
-// Flex start
-const flexStyles = StyleSheet.create({
+// Flex Align property
+const flexAlignStyles = StyleSheet.create({
   viewStyle: {
     borderWidth: 3,
     borderColor: 'black',
+    alignItems: 'center'
+  },
+  textStyle: {
+    borderWidth: 3,
+    borderColor: 'red',
+  }
+});
+
+// Flex Direction property
+const flexDirectionStyles = StyleSheet.create({
+  viewStyle: {
+    borderWidth: 3,
+    borderColor: 'black',
+    flexDirection: 'row',
+    height: 200,
     alignItems: 'center'
   },
   textStyle: {
