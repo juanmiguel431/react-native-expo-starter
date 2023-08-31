@@ -77,24 +77,25 @@ const flexAlignStyles = StyleSheet.create({
   viewStyle: {
     borderWidth: 3,
     borderColor: 'black',
-    // alignItems: 'center',
+    alignItems: 'center',
     // flexDirection: 'row',
     height: 200
   },
   textOneStyle: {
     borderWidth: 3,
     borderColor: 'red',
-    flex: 4
+    // flex: 4,
   },
   textTwoStyle: {
     borderWidth: 3,
     borderColor: 'red',
-    flex: 4
+    // flex: 4,
+    alignSelf: 'flex-end'
   },
   textThreeStyle: {
     borderWidth: 3,
     borderColor: 'red',
-    flex: 2
+    // flex: 2
   },
 });
 
