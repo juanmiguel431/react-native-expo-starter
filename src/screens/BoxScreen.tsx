@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
-import { Text, View, StyleSheet, Platform } from 'react-native';
+import { Text, View, StyleSheet, Platform, ScrollView } from 'react-native';
 
 interface BoxScreenProps {
   navigation: NavigationScreenProp<NavigationState>;
@@ -9,7 +9,7 @@ interface BoxScreenProps {
 const BoxScreen: React.FC<BoxScreenProps> = () => {
   const [name, setName] = useState('');
   return (
-    <>
+    <ScrollView>
       <View style={styles.viewStyle}>
         <View style={styles.textStyle}>
           <Text>Box Screen</Text>
@@ -54,7 +54,19 @@ const BoxScreen: React.FC<BoxScreenProps> = () => {
           <Text>Child 3</Text>
         </View>
       </View>
-    </>
+
+      <View style={flexJustifyContentStyles.viewStyle}>
+        <View style={flexJustifyContentStyles.textStyle}>
+          <Text>Child 1</Text>
+        </View>
+        <View style={flexJustifyContentStyles.textStyle}>
+          <Text>Child 2</Text>
+        </View>
+        <View style={flexJustifyContentStyles.textStyle}>
+          <Text>Child 3</Text>
+        </View>
+      </View>
+    </ScrollView>
   )
 };
 
