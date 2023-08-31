@@ -18,13 +18,13 @@ const BoxScreen: React.FC<BoxScreenProps> = () => {
 
       {/*Flex Align property*/}
       <View style={flexAlignStyles.viewStyle}>
-        <View style={flexAlignStyles.textStyle}>
+        <View style={flexAlignStyles.textOneStyle}>
           <Text>Child 1</Text>
         </View>
-        <View style={flexAlignStyles.textStyle}>
+        <View style={flexAlignStyles.textTwoStyle}>
           <Text>Child 2</Text>
         </View>
-        <View style={flexAlignStyles.textStyle}>
+        <View style={flexAlignStyles.textThreeStyle}>
           <Text>Child 3</Text>
         </View>
       </View>
@@ -77,12 +77,25 @@ const flexAlignStyles = StyleSheet.create({
   viewStyle: {
     borderWidth: 3,
     borderColor: 'black',
-    alignItems: 'center'
+    // alignItems: 'center',
+    // flexDirection: 'row',
+    height: 200
   },
-  textStyle: {
+  textOneStyle: {
     borderWidth: 3,
     borderColor: 'red',
-  }
+    flex: 4
+  },
+  textTwoStyle: {
+    borderWidth: 3,
+    borderColor: 'red',
+    flex: 4
+  },
+  textThreeStyle: {
+    borderWidth: 3,
+    borderColor: 'red',
+    flex: 2
+  },
 });
 
 // Flex Direction property
