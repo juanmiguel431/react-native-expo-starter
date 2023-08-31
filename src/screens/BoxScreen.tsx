@@ -102,7 +102,9 @@ const flexAlignStyles = StyleSheet.create({
     borderWidth: 3,
     borderColor: 'red',
     // flex: 4,
-    alignSelf: 'flex-end'
+    alignSelf: 'flex-end',
+    // position: 'absolute'
+    top: 20
   },
   textThreeStyle: {
     borderWidth: 3,
