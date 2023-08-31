@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     backgroundColor: 'green',
-    marginTop: 50
+    alignSelf: 'flex-end'
   },
   view3: {
     height: 50,
@@ -37,7 +37,10 @@ const styles = StyleSheet.create({
   },
   container: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    height: 100,
+    borderColor: 'black',
+    borderWidth: 3
   }
 });
 
