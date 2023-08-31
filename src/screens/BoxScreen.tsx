@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavigationScreenProp, NavigationState } from 'react-navigation';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Platform } from 'react-native';
 
 interface BoxScreenProps {
   navigation: NavigationScreenProp<NavigationState>;
@@ -9,19 +9,23 @@ interface BoxScreenProps {
 const BoxScreen: React.FC<BoxScreenProps> = () => {
   const [name, setName] = useState('');
   return (
-    <View>
-      <Text>Box Screen</Text>
+    <View style={styles.viewStyle}>
+      <View style={styles.textStyle}> {/*Issue if I try to apply this style to a Text Element in Android.*/}
+        <Text>Box Screen</Text>
+      </View>
     </View>
   )
 };
 
 const styles = StyleSheet.create({
-  input: {
-    fontSize: 35,
-    margin: 15,
-    height: 60,
-    borderColor: 'black',
-    borderWidth: 1
+  viewStyle: {
+    borderWidth: 3,
+    borderColor: 'black'
+  },
+  textStyle: {
+    borderWidth: 10,
+    borderColor: 'red',
+    margin: 20,
   }
 });
 
