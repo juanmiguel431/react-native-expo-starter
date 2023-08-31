@@ -96,14 +96,17 @@ const flexAlignStyles = StyleSheet.create({
   textOneStyle: {
     borderWidth: 3,
     borderColor: 'red',
+    backgroundColor: '#1c467e',
     // flex: 4,
   },
   textTwoStyle: {
     borderWidth: 3,
     borderColor: 'red',
+    backgroundColor: '#3eb23e',
     // flex: 4,
     // alignSelf: 'flex-end',
 
+    zIndex: 99,
     ...StyleSheet.absoluteFillObject,
 
     // position: 'absolute',
@@ -115,6 +118,7 @@ const flexAlignStyles = StyleSheet.create({
   textThreeStyle: {
     borderWidth: 3,
     borderColor: 'red',
+    backgroundColor: '#cfde71',
     // flex: 2
   },
 });
