@@ -14,6 +14,8 @@ import SquareReducerScreen from './src/screens/SquareReducerScreen';
 import CounterReducerScreen from './src/screens/CounterReducerScreen';
 import TextScreen from './src/screens/TextScreen';
 import BoxScreen from './src/screens/BoxScreen';
+import FlexBoxEx1V1Screen from './src/screens/FlexBoxEx1v1Screen';
+import FlexBoxEx1V2Screen from './src/screens/FlexBoxEx1v2Screen';
 
 // export function App() {
 //   return (
@@ -45,6 +47,8 @@ const navigator = createStackNavigator({
   [SCREEN.SquareReducer]: SquareReducerScreen,
   [SCREEN.Text]: TextScreen,
   [SCREEN.Box]: BoxScreen,
+  [SCREEN.FlexBoxExercise1v1]: FlexBoxEx1V1Screen,
+  [SCREEN.FlexBoxExercise1v2]: FlexBoxEx1V2Screen,
 }, {
   initialRouteName: SCREEN.Home,
   defaultNavigationOptions: {

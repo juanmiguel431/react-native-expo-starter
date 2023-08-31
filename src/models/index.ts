@@ -12,6 +12,8 @@ export const SCREEN = {
   SquareReducer: 'Square Reducer',
   Text: 'Text',
   Box: 'Box',
+  FlexBoxExercise1v1: 'FlexBox Exercise1 v1',
+  FlexBoxExercise1v2: 'FlexBox Exercise1 v2',
 } as const;
 export type Screen = ObjectValues<typeof SCREEN>;
 
