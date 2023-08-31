@@ -41,6 +41,19 @@ const BoxScreen: React.FC<BoxScreenProps> = () => {
           <Text>Child 3</Text>
         </View>
       </View>
+
+      {/*Flex JustifyContent property*/}
+      <View style={flexJustifyContentStyles.viewStyle}>
+        <View style={flexJustifyContentStyles.textStyle}>
+          <Text>Child 1</Text>
+        </View>
+        <View style={flexJustifyContentStyles.textStyle}>
+          <Text>Child 2</Text>
+        </View>
+        <View style={flexJustifyContentStyles.textStyle}>
+          <Text>Child 3</Text>
+        </View>
+      </View>
     </>
   )
 };
@@ -80,6 +93,20 @@ const flexDirectionStyles = StyleSheet.create({
     flexDirection: 'row',
     height: 200,
     alignItems: 'center'
+  },
+  textStyle: {
+    borderWidth: 3,
+    borderColor: 'red',
+  }
+});
+
+// Flex JustifyContent property
+const flexJustifyContentStyles = StyleSheet.create({
+  viewStyle: {
+    borderWidth: 3,
+    borderColor: 'black',
+    height: 200,
+    justifyContent: 'center'
   },
   textStyle: {
     borderWidth: 3,
