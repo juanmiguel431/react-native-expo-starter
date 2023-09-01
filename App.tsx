@@ -17,6 +17,7 @@ import BoxScreen from './src/screens/BoxScreen';
 import FlexBoxEx1V1Screen from './src/screens/FlexBoxEx1v1Screen';
 import FlexBoxEx1V2Screen from './src/screens/FlexBoxEx1v2Screen';
 import FlexBoxEx1TeacherSolutionScreen from './src/screens/FlexBoxEx1TeacherSolutionScreen';
+import FlexBoxEx1TeacherSolutionV2Screen from './src/screens/FlexBoxEx1TeacherSolutionV2Screen';
 
 // export function App() {
 //   return (
@@ -51,6 +52,7 @@ const navigator = createStackNavigator({
   [SCREEN.FlexBoxExercise1v1]: FlexBoxEx1V1Screen,
   [SCREEN.FlexBoxExercise1v2]: FlexBoxEx1V2Screen,
   [SCREEN.FlexBoxEx1TeacherSolutionScreen]: FlexBoxEx1TeacherSolutionScreen,
+  [SCREEN.FlexBoxEx1TeacherSolutionV2Screen]: FlexBoxEx1TeacherSolutionV2Screen,
 }, {
   initialRouteName: SCREEN.Home,
   defaultNavigationOptions: {

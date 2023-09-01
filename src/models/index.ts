@@ -13,7 +13,9 @@ export const SCREEN = {
   Text: 'Text',
   Box: 'Box',
   FlexBoxExercise1v1: 'FlexBox Exercise1 v1',
-  FlexBoxExercise1v2: 'FlexBox Exercise1 v2', FlexBoxEx1TeacherSolutionScreen: 'Flex Box Ex1 Teacher Solution'
+  FlexBoxExercise1v2: 'FlexBox Exercise1 v2',
+  FlexBoxEx1TeacherSolutionScreen: 'Flex Box Ex1 Teacher Solution',
+  FlexBoxEx1TeacherSolutionV2Screen: 'Flex Box Ex1 Teacher Solution v2'
 
 } as const;
 export type Screen = ObjectValues<typeof SCREEN>;
